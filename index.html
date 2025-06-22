@@ -34,19 +34,29 @@
     }
     header {
       height: 100vh;
-      background: #6C63FF;
+      background: url('network-blue.jpg') center center / cover no-repeat;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
     }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
     .hero-content {
+      position: relative;
+      z-index: 2;
       color: white;
     }
     .hero-content img {
-      max-width: 260px;
-      margin-bottom: 25px;
+      max-width: 180px;
+      margin-bottom: 20px;
     }
     .hero-content h1 {
       font-size: 40px;
@@ -64,6 +74,15 @@
       color: #222;
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .platforms {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .platforms img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
     }
     footer {
       text-align: center;
@@ -83,7 +102,7 @@
 
   <header>
     <div class="hero-content">
-      <img src="RITEXA-DIGITAL-PNG.png" alt="RDI Logo" />
+      <img src="new-logo.png" alt="RDI Logo" />
       <h1>RDI – Ritexa Digital India</h1>
       <p>Music Distribution • YouTube Channel Management</p>
     </div>
@@ -115,6 +134,11 @@
       <li>Website & Branding Development</li>
       <li>Google Ads & Marketing</li>
     </ul>
+  </section>
+
+  <section class="platforms">
+    <h2>Our Distribution Platforms</h2>
+    <img src="streaming-platforms.jpg" alt="Streaming Platforms" />
   </section>
 
   <section id="contact">
